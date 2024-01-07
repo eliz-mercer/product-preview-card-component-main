@@ -1,0 +1,136 @@
+:root {
+  /* primary */
+  --Dark-cyan: hsl(158, 36%, 37%);
+  --Cream: hsl(30, 38%, 92%);
+  /* neutral */
+  --Very-dark-blue: hsl(212, 21%, 14%);
+  --Dark-grayish-blue: hsl(228, 12%, 48%, 0.7);
+  --White: hsl(0, 0%, 100%);
+}
+/* fast reset css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+img {
+  width: 100%;
+}
+
+/*  styles star */
+/* font style */
+
+h3 {
+  font-size: 12px;
+  color: var(--Dark-grayish-blue);
+  font-family: "Fraunces", serif;
+}
+
+h2 {
+  font-size: 2em;
+  font-family: "Fraunces", serif;
+  font-weight: 700;
+  margin: 12px 0;
+}
+p {
+  font-size: 14px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  color: var(--Dark-grayish-blue);
+}
+body {
+  background-color: var(--Cream);
+  width: 100%;
+  min-width: 375px;
+  height: 100vh;
+  /* flex styles */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  background: #ffffff;
+  max-width: 340px;
+  border-radius: 12px;
+  overflow: hidden;
+}
+.banner{
+    width: 340px;
+    height: 220px;
+    background-image: url(images/image-product-mobile.jpg);
+    background-size: cover;
+}
+.info {
+  width: 300px;
+  margin: 14px auto;
+}
+.buy{
+    margin: 16px 0;
+}
+
+.buy > .price {
+    display: flex;
+    align-items: center;
+}
+.buy > .price .discount{
+    margin-right: 15px;
+    color: var(--Dark-cyan);
+    font-size: 2em;
+    font-family: 'Fraunces', serif;
+    font-weight: 700;
+}
+
+.before{
+    color: var(--Dark-grayish-blue);
+    text-decoration: line-through;
+    font-family: 'Montserrat', sans-serif;
+    
+
+}
+
+.btn-add{
+    color: var(--White);
+    background: var(--Dark-cyan);
+    width: 100%;
+    height: 39px;
+    margin: 14px 0 24px;
+    border: darkgreen;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    border-radius: 5px;
+}
+
+/* desktop styles */
+
+@media only screen and (min-width:1440px) {
+    body{
+        background-color: salmon;
+        width: 100%;
+        min-width: 1440px;
+    }
+    .container{
+        max-width: 550px;
+        height: 400px;
+        display: flex;
+    }
+    .ctn{
+        width: 300px;
+    }
+    .banner{
+        background-image: url(images/image-product-desktop.jpg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        height: auto;
+
+    }
+    
+    .info{
+        width: 240px;
+        margin-top: 30px ;
+    }
+    .btn-add:hover{
+        background: var(--Very-dark-blue);
+       
+    }
+}
